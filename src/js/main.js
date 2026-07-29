@@ -1,6 +1,5 @@
 import Alpine from "alpinejs";
 import Swup from "swup";
-import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,16 +8,6 @@ window.Alpine = Alpine;
 
 const isTouch = window.matchMedia("(pointer: coarse)").matches;
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-/* ---------- Smooth scroll (Lenis) piloté par GSAP ticker ---------- */
-let lenis;
-function initSmoothScroll() {
-  if (prefersReducedMotion) return;
-  lenis = new Lenis({ duration: 1.1, smoothWheel: true });
-  gsap.ticker.add((time) => lenis.raf(time * 1000));
-  gsap.ticker.lagSmoothing(0);
-  lenis.on("scroll", ScrollTrigger.update);
-}
 
 /* ---------- Préloader ---------- */
 function runPreloader() {
@@ -309,7 +298,6 @@ function initPageAnimations(container = document, { hero = false } = {}) {
 
 Alpine.start();
 initCustomCursor();
-initSmoothScroll();
 
 runPreloader().then(() => {
   initPageAnimations(document, { hero: true });
@@ -320,10 +308,6 @@ const swup = new Swup({
   animateHistoryBrowsing: true
 });
 
-swup.hooks.on("visit:start", () => {
-  lenis?.stop();
-});
-
 swup.hooks.on("content:replace", () => {
   window.scrollTo(0, 0);
   document.querySelector("[data-preloader]")?.remove();
@@ -332,5 +316,4 @@ swup.hooks.on("content:replace", () => {
 
 swup.hooks.on("page:view", () => {
   initPageAnimations(document, { hero: true });
-  lenis?.start();
 });
