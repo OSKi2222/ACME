@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nous, ACME — Africa Construction &amp; Mining Equipment</title>
+  <meta name="description" content="Depuis 7 ans, ACME façonne ses valeurs autour de la qualité, du rythme et de l'innovation dans la construction au Burkina Faso." />
+  <link rel="stylesheet" href="/ACME/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="/ACME/assets/main-DolGluZd.js"></script>
+</head>
+<body id="swup" class="transition-fade">
+
+  <div data-preloader>
+    <div data-preloader-bar></div>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="container-page flex items-center justify-between py-4" x-data="{ open: false }">
+      <a href="../" class="flex items-center">
+        <img src="/ACME/images/logo-acme.png" alt="ACME — Africa Construction &amp; Mining Equipment" class="h-12 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide">
+        <a href="nous-acme.html" class="text-brand" data-underline>Nous, ACME</a>
+        <a href="services.html" class="hover:text-brand transition-colors" data-underline>Services</a>
+        <a href="contacts.html" class="hover:text-brand transition-colors" data-underline>Contacts</a>
+      </nav>
+      <a href="contacts.html" class="hidden md:inline-flex btn-primary text-sm">Demander un devis</a>
+      <button @click="open = !open" class="md:hidden p-2 text-ink-dark" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div x-show="open" x-transition @click.outside="open = false"
+           class="absolute top-full left-0 right-0 bg-white border-b border-gray-100 md:hidden">
+        <nav class="container-page flex flex-col gap-4 py-6 text-sm font-semibold uppercase tracking-wide">
+          <a href="nous-acme.html" class="text-brand">Nous, ACME</a>
+          <a href="services.html" class="hover:text-brand transition-colors">Services</a>
+          <a href="contacts.html" class="hover:text-brand transition-colors">Contacts</a>
+          <a href="contacts.html" class="btn-primary mt-2">Demander un devis</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="relative dark-surface text-white py-24">
+      <div class="orb orb-brand w-[360px] h-[360px] -top-24 -right-20" data-float="16"></div>
+      <div class="orb orb-accent w-[260px] h-[260px] bottom-0 left-10" data-float="20"></div>
+      <div class="container-page relative">
+        <p class="section-kicker text-brand-light" data-split-text>À propos</p>
+        <h1 class="text-4xl md:text-6xl font-semibold max-w-2xl" data-split-text>Nous, ACME</h1>
+        <p class="mt-6 max-w-xl text-gray-300">Pendant tout ce temps, nous sommes restés fidèles aux mêmes principes de fonctionnement des affaires.</p>
+      </div>
+    </section>
+
+    <!-- VALEURS -->
+    <section class="py-24 bg-white">
+      <div class="container-page">
+        <p class="section-kicker">À propos de notre entreprise</p>
+        <h2 class="section-title mb-14 max-w-2xl">Nos valeurs</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="reveal glass-card-light p-8" data-reveal-group="valeurs" data-tilt>
+            <h3 class="text-lg font-semibold text-ink-dark mb-2">Responsabilité</h3>
+            <p class="text-sm">Les valeurs fondamentales de ACME ont été façonnées au fil de plus de 7 ans de prestation de services de construction de premier ordre à nos clients. Nous n'avons jamais cherché à faire de compromis sur la qualité, le rythme d'exécution ou tout autre aspect de la construction.</p>
+          </div>
+          <div class="reveal glass-card-light p-8" data-reveal-group="valeurs" data-tilt>
+            <h3 class="text-lg font-semibold text-ink-dark mb-2">Rythme</h3>
+            <p class="text-sm">Notre exigence en matière de préparation détaillée, structurée et transparente, ainsi que notre gestion de projet claire et notre communication ouverte, sont ce qui nous distingue de la concurrence.</p>
+          </div>
+          <div class="reveal glass-card-light p-8" data-reveal-group="valeurs" data-tilt>
+            <h3 class="text-lg font-semibold text-ink-dark mb-2">Qualité</h3>
+            <p class="text-sm">La qualité est au cœur de chaque détail de nos réalisations. C'est cette attention aux détails qui nous permet de gérer plusieurs projets simultanément tout en respectant les délais.</p>
+          </div>
+          <div class="reveal glass-card-light p-8" data-reveal-group="valeurs" data-tilt>
+            <h3 class="text-lg font-semibold text-ink-dark mb-2">Solutions innovantes</h3>
+            <p class="text-sm">Nous encourageons l'innovation et la créativité, combinées à l'expérience et à une exécution maîtrisée, comme partie intégrante de notre culture.</p>
+          </div>
+          <div class="reveal glass-card-light p-8" data-reveal-group="valeurs" data-tilt>
+            <h3 class="text-lg font-semibold text-ink-dark mb-2">Respect de l'environnement</h3>
+            <p class="text-sm">Nous nous efforçons d'utiliser uniquement des matériaux écologiques et de préserver un environnement non pollué dans toutes nos activités.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHIFFRES CLES -->
+    <section class="py-24 bg-gray-50">
+      <div class="container-page grid sm:grid-cols-2 gap-8 text-center max-w-2xl mx-auto">
+        <div class="reveal bg-white rounded-lg p-10 shadow-sm">
+          <span class="block text-5xl font-bold text-brand" data-counter="7">0</span>
+          <span class="text-sm mt-2 block">Ans d'existence</span>
+        </div>
+        <div class="reveal bg-white rounded-lg p-10 shadow-sm">
+          <span class="block text-5xl font-bold text-brand" data-counter="200">0</span>
+          <span class="text-sm mt-2 block">Projets réalisés</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section class="py-24 bg-white">
+      <div class="container-page">
+        <p class="section-kicker">Notre force</p>
+        <h2 class="section-title mb-14 max-w-2xl">Des femmes et des hommes qui bâtissent l'Afrique</h2>
+        <div class="grid sm:grid-cols-2 gap-8">
+          <div class="rounded-lg bg-gray-100 aspect-[4/3]" data-img-reveal>
+            <img src="/ACME/images/team/photo-famille.webp" alt="L'équipe ACME" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+          <div class="rounded-lg bg-gray-100 aspect-[4/3]" data-img-reveal>
+            <img src="/ACME/images/siege-acme.webp" alt="Siège ACME à Ouagadougou" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="relative dark-surface text-white text-center py-24">
+      <div class="orb orb-brand w-[300px] h-[300px] -bottom-20 left-1/3" data-float="18"></div>
+      <div class="container-page reveal relative">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6">Si vous pouvez l'imaginer, alors nous pouvons le construire !</h2>
+        <a href="contacts.html" class="btn-accent" data-magnetic>Contactez-nous</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-ink-dark text-white">
+    <div class="container-page py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div>
+        <img src="/ACME/images/logo-acme.png" alt="ACME — Africa Construction &amp; Mining Equipment" class="h-14 w-auto bg-white rounded-md px-3 py-2" />
+        <p class="mt-3 text-sm text-gray-400">Africa Construction &amp; Mining Equipment. Construire l'Afrique, brique par brique.</p>
+        <a href="https://facebook.com/acmesarl" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-sm text-gray-400 hover:text-brand-light transition-colors">Facebook</a>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-white mb-4">Navigation</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="../" class="hover:text-brand-light transition-colors">Accueil</a></li>
+          <li><a href="nous-acme.html" class="hover:text-brand-light transition-colors">Nous, ACME</a></li>
+          <li><a href="services.html" class="hover:text-brand-light transition-colors">Services</a></li>
+          <li><a href="contacts.html" class="hover:text-brand-light transition-colors">Contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-white mb-4">Services</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="services.html#gestion-projet" class="hover:text-brand-light transition-colors">Gestion de projet</a></li>
+          <li><a href="services.html#conception-realisation" class="hover:text-brand-light transition-colors">Conception-réalisation</a></li>
+          <li><a href="services.html#avant-construction" class="hover:text-brand-light transition-colors">Services avant-construction</a></li>
+          <li><a href="services.html#equipements" class="hover:text-brand-light transition-colors">Équipements de construction</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-white mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>Ouagadougou, ZAD, à 50 mètres de Coris Bank, Burkina Faso, 03 BP 83</li>
+          <li><a href="tel:+22670202656" class="hover:text-brand-light transition-colors">+226 70 20 26 56</a></li>
+          <li><a href="tel:+22676159090" class="hover:text-brand-light transition-colors">+226 76 15 90 90</a></li>
+          <li><a href="mailto:contact@group-acme.com" class="hover:text-brand-light transition-colors">contact@group-acme.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-page py-6 text-xs text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
+        <span>&copy; 2026 ACME — Africa Construction &amp; Mining Equipment. Tous droits réservés.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/22670202656" target="_blank" rel="noopener"
+     class="fixed bottom-6 right-6 z-50 flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition-transform"
+     aria-label="Contacter ACME sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7" fill="currentColor">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.63 1.44 5.16L2 22l5.09-1.55a9.9 9.9 0 0 0 4.95 1.32h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.08a8.18 8.18 0 0 1-4.17-1.15l-.3-.18-3.02.92.93-2.94-.2-.31a8.14 8.14 0 0 1-1.26-4.4c0-4.5 3.66-8.16 8.17-8.16 4.5 0 8.16 3.66 8.16 8.16 0 4.51-3.66 8.06-8.31 8.06Zm4.47-6.12c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.2-1.44-1.35-1.68-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
