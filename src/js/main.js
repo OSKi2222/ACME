@@ -215,21 +215,22 @@ function tiltCards(container = document) {
   if (isTouch) return;
   container.querySelectorAll("[data-tilt]").forEach((card) => {
     const strength = 10;
+    gsap.set(card, { transformPerspective: 800 });
+    const rotateX = gsap.quickTo(card, "rotateX", { duration: 0.4, ease: "power2.out" });
+    const rotateY = gsap.quickTo(card, "rotateY", { duration: 0.4, ease: "power2.out" });
+    const lift = gsap.quickTo(card, "translateY", { duration: 0.4, ease: "power2.out" });
     const onMove = (e) => {
       const rect = card.getBoundingClientRect();
       const px = (e.clientX - rect.left) / rect.width - 0.5;
       const py = (e.clientY - rect.top) / rect.height - 0.5;
-      gsap.to(card, {
-        rotateX: -py * strength,
-        rotateY: px * strength,
-        translateY: -6,
-        duration: 0.4,
-        ease: "power2.out",
-        transformPerspective: 800
-      });
+      rotateX(-py * strength);
+      rotateY(px * strength);
+      lift(-6);
     };
     const onLeave = () => {
-      gsap.to(card, { rotateX: 0, rotateY: 0, translateY: 0, duration: 0.6, ease: "power3.out" });
+      rotateX(0);
+      rotateY(0);
+      lift(0);
     };
     card.addEventListener("mousemove", onMove);
     card.addEventListener("mouseleave", onLeave);
@@ -240,11 +241,12 @@ function tiltCards(container = document) {
 function magneticButtons(container = document) {
   if (isTouch) return;
   container.querySelectorAll("[data-magnetic]").forEach((btn) => {
+    const moveX = gsap.quickTo(btn, "x", { duration: 0.3, ease: "power2.out" });
+    const moveY = gsap.quickTo(btn, "y", { duration: 0.3, ease: "power2.out" });
     const onMove = (e) => {
       const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      gsap.to(btn, { x: x * 0.35, y: y * 0.35, duration: 0.3, ease: "power2.out" });
+      moveX((e.clientX - rect.left - rect.width / 2) * 0.35);
+      moveY((e.clientY - rect.top - rect.height / 2) * 0.35);
     };
     const onLeave = () => {
       gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.4)" });
@@ -270,13 +272,13 @@ function initCustomCursor() {
   cursor.className = "custom-cursor";
   document.body.appendChild(cursor);
 
-  const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
   gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+  const moveX = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power2.out" });
+  const moveY = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power2.out" });
 
   window.addEventListener("mousemove", (e) => {
-    pos.x = e.clientX;
-    pos.y = e.clientY;
-    gsap.to(cursor, { x: pos.x, y: pos.y, duration: 0.15, ease: "power2.out" });
+    moveX(e.clientX);
+    moveY(e.clientY);
   });
 
   document.addEventListener("mouseover", (e) => {
