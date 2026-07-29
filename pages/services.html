@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — ACME Africa Construction &amp; Mining Equipment</title>
+  <meta name="description" content="Gestion de projet, conception-réalisation, services avant-construction et équipements miniers : les services ACME au Burkina Faso." />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body id="swup" class="transition-fade">
+
+  <div data-preloader>
+    <div data-preloader-bar></div>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-gray-100">
+    <div class="container-page flex items-center justify-between py-4" x-data="{ open: false }">
+      <a href="../" class="flex items-center">
+        <img src="/images/logo-acme.png" alt="ACME — Africa Construction &amp; Mining Equipment" class="h-12 w-auto" />
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-wide">
+        <a href="nous-acme.html" class="hover:text-brand transition-colors" data-underline>Nous, ACME</a>
+        <a href="services.html" class="text-brand" data-underline>Services</a>
+        <a href="contacts.html" class="hover:text-brand transition-colors" data-underline>Contacts</a>
+      </nav>
+      <a href="contacts.html" class="hidden md:inline-flex btn-primary text-sm">Demander un devis</a>
+      <button @click="open = !open" class="md:hidden p-2 text-ink-dark" aria-label="Ouvrir le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <div x-show="open" x-transition @click.outside="open = false"
+           class="absolute top-full left-0 right-0 bg-white border-b border-gray-100 md:hidden">
+        <nav class="container-page flex flex-col gap-4 py-6 text-sm font-semibold uppercase tracking-wide">
+          <a href="nous-acme.html" class="hover:text-brand transition-colors">Nous, ACME</a>
+          <a href="services.html" class="text-brand">Services</a>
+          <a href="contacts.html" class="hover:text-brand transition-colors">Contacts</a>
+          <a href="contacts.html" class="btn-primary mt-2">Demander un devis</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="relative dark-surface text-white py-24">
+      <div class="orb orb-brand w-[360px] h-[360px] -top-24 -left-20" data-float="16"></div>
+      <div class="orb orb-accent w-[280px] h-[280px] bottom-0 right-0" data-float="22"></div>
+      <div class="container-page relative">
+        <p class="section-kicker text-brand-light" data-split-text>Ce que nous faisons</p>
+        <h1 class="text-4xl md:text-6xl font-semibold max-w-2xl" data-split-text>Nos services</h1>
+        <p class="mt-6 max-w-xl text-gray-300">La taille de notre équipe et notre expertise de terrain nous permettent de mener à bien tout type de chantier, quelle que soit sa hauteur ou sa complexité.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-24 bg-white">
+      <div class="container-page grid gap-16">
+
+        <div id="gestion-projet" class="grid md:grid-cols-5 gap-10 items-center">
+          <div class="md:col-span-2 rounded-2xl bg-gray-100 aspect-[4/3]" data-img-reveal>
+            <img src="/images/services/service_2.webp" alt="Gestion de projet ACME" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+          <div class="reveal md:col-span-3">
+            <h2 class="text-2xl font-semibold text-ink-dark mb-3">Gestion de projet</h2>
+            <p>Une équipe de contremaîtres et de chefs de chantier expérimentés coordonne chaque intervention, du terrassement à la livraison. Un planning hebdomadaire (Pull Planning) est partagé avec les sous-traitants afin de fiabiliser les délais et d'anticiper les points de blocage.</p>
+          </div>
+        </div>
+
+        <div id="conception-realisation" class="grid md:grid-cols-5 gap-10 items-center border-t border-gray-100 pt-16">
+          <div class="reveal md:col-span-3 md:order-1 order-2">
+            <h2 class="text-2xl font-semibold text-ink-dark mb-3">Conception-Réalisation</h2>
+            <p>Pour les projets les moins complexes, ACME assure à la fois la conception et la construction : un seul interlocuteur, une meilleure coordination entre les études et le chantier, et une réduction sensible des délais de livraison.</p>
+          </div>
+          <div class="md:col-span-2 order-1 md:order-2 rounded-2xl bg-gray-100 aspect-[4/3]" data-img-reveal>
+            <img src="/images/services/service_3.webp" alt="Conception-Réalisation ACME" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <div id="avant-construction" class="grid md:grid-cols-5 gap-10 items-center border-t border-gray-100 pt-16">
+          <div class="md:col-span-2 rounded-2xl bg-gray-100 aspect-[4/3]" data-img-reveal>
+            <img src="/images/services/service_4.webp" alt="Services avant-construction ACME" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+          <div class="reveal md:col-span-3">
+            <h2 class="text-2xl font-semibold text-ink-dark mb-3">Services Avant-Construction</h2>
+            <p>Avant chaque chantier, une phase de planification détaillée permet d'équilibrer budget, faisabilité technique et délais — étude de sol, chiffrage, choix des matériaux et des équipements adaptés au site.</p>
+          </div>
+        </div>
+
+        <div id="equipements" class="grid md:grid-cols-5 gap-10 items-center border-t border-gray-100 pt-16">
+          <div class="reveal md:col-span-3 md:order-1 order-2">
+            <h2 class="text-2xl font-semibold text-ink-dark mb-3">Équipements de construction &amp; miniers</h2>
+            <p>Mise à disposition d'équipements de construction et miniers fiables, entretenus régulièrement, avec un service technique disponible à chaque étape du chantier pour garantir leur bon fonctionnement.</p>
+          </div>
+          <div class="md:col-span-2 order-1 md:order-2 rounded-2xl bg-gray-100 aspect-[4/3]" data-img-reveal>
+            <img src="/images/services/service_1.webp" alt="Équipements de construction ACME" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-10 items-center border-t border-gray-100 pt-16">
+          <div class="md:col-span-2 rounded-2xl bg-gray-100 aspect-[4/3]" data-img-reveal>
+            <img src="/images/services/service_6.webp" alt="Modélisation BIM ACME" class="h-full w-full object-cover" loading="lazy" />
+          </div>
+          <div class="reveal md:col-span-3">
+            <h2 class="text-2xl font-semibold text-ink-dark mb-3">Modélisation des informations du bâtiment (BIM)</h2>
+            <p>Sur les projets qui le nécessitent, l'essence physique et fonctionnelle du bâtiment est représentée numériquement sous forme de modèle 3D, facilitant la coordination entre les corps de métier avant et pendant la construction.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="relative dark-surface text-white text-center py-24">
+      <div class="orb orb-brand w-[300px] h-[300px] -bottom-20 right-1/4" data-float="18"></div>
+      <div class="container-page reveal relative">
+        <h2 class="text-3xl md:text-4xl font-semibold mb-6">Si vous pouvez l'imaginer, alors nous pouvons le construire — parlez-nous de votre projet</h2>
+        <a href="contacts.html" class="btn-accent" data-magnetic>Demander un devis</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-ink-dark text-white">
+    <div class="container-page py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div>
+        <img src="/images/logo-acme.png" alt="ACME — Africa Construction &amp; Mining Equipment" class="h-14 w-auto bg-white rounded-md px-3 py-2" />
+        <p class="mt-3 text-sm text-gray-400">Africa Construction &amp; Mining Equipment. Construire l'Afrique, brique par brique.</p>
+        <a href="https://facebook.com/acmesarl" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-sm text-gray-400 hover:text-brand-light transition-colors">Facebook</a>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-white mb-4">Navigation</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="../" class="hover:text-brand-light transition-colors">Accueil</a></li>
+          <li><a href="nous-acme.html" class="hover:text-brand-light transition-colors">Nous, ACME</a></li>
+          <li><a href="services.html" class="hover:text-brand-light transition-colors">Services</a></li>
+          <li><a href="contacts.html" class="hover:text-brand-light transition-colors">Contacts</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-white mb-4">Services</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="services.html#gestion-projet" class="hover:text-brand-light transition-colors">Gestion de projet</a></li>
+          <li><a href="services.html#conception-realisation" class="hover:text-brand-light transition-colors">Conception-réalisation</a></li>
+          <li><a href="services.html#avant-construction" class="hover:text-brand-light transition-colors">Services avant-construction</a></li>
+          <li><a href="services.html#equipements" class="hover:text-brand-light transition-colors">Équipements de construction</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-sm font-semibold uppercase tracking-wide text-white mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>Ouagadougou, ZAD, à 50 mètres de Coris Bank, Burkina Faso, 03 BP 83</li>
+          <li><a href="tel:+22670202656" class="hover:text-brand-light transition-colors">+226 70 20 26 56</a></li>
+          <li><a href="tel:+22676159090" class="hover:text-brand-light transition-colors">+226 76 15 90 90</a></li>
+          <li><a href="mailto:contact@group-acme.com" class="hover:text-brand-light transition-colors">contact@group-acme.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-page py-6 text-xs text-gray-500 flex flex-col sm:flex-row justify-between gap-2">
+        <span>&copy; 2026 ACME — Africa Construction &amp; Mining Equipment. Tous droits réservés.</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/22670202656" target="_blank" rel="noopener"
+     class="fixed bottom-6 right-6 z-50 flex items-center justify-center h-14 w-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition-transform"
+     aria-label="Contacter ACME sur WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-7 w-7" fill="currentColor">
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.63 1.44 5.16L2 22l5.09-1.55a9.9 9.9 0 0 0 4.95 1.32h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.08a8.18 8.18 0 0 1-4.17-1.15l-.3-.18-3.02.92.93-2.94-.2-.31a8.14 8.14 0 0 1-1.26-4.4c0-4.5 3.66-8.16 8.17-8.16 4.5 0 8.16 3.66 8.16 8.16 0 4.51-3.66 8.06-8.31 8.06Zm4.47-6.12c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.95-1.21-.72-.64-1.2-1.44-1.35-1.68-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z"/>
+    </svg>
+  </a>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>
