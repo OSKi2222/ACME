@@ -2,3 +2,7 @@ node_modules/
 dist/
 public/css/style.css
 .DS_Store
+
+# Documentation interne / notes de travail
+*.md
+.claude/

@@ -67,10 +67,10 @@
       </div>
       <div class="container-page relative py-32 md:py-44 min-h-[480px] flex flex-col justify-center">
         <p class="section-kicker text-brand-light" data-split-text>ACME — Africa Construction &amp; Mining Equipment</p>
-        <h1 class="text-5xl md:text-7xl font-semibold max-w-3xl leading-tight" data-split-text>Construire l'Afrique, brique par brique</h1>
-        <div class="mt-6 max-w-xl h-7 relative">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-semibold max-w-3xl leading-tight" data-split-text>Construire l'Afrique, brique par brique</h1>
+        <div class="mt-6 max-w-xl min-h-[3.5rem] sm:h-7 relative">
           <template x-for="(tagline, i) in taglines" :key="i">
-            <p x-show="current === i" x-transition.opacity.duration.700ms class="absolute text-gray-300" x-text="tagline"></p>
+            <p x-show="current === i" x-transition.opacity.duration.700ms class="sm:absolute text-gray-300" x-text="tagline"></p>
           </template>
         </div>
         <div class="mt-10 flex flex-wrap gap-4">
